@@ -8,8 +8,8 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        ruby = pkgs.ruby_3_2.withPackages (ps: with ps; [ nokogiri ]);
-        deps = [ ruby pkgs.gnuplot pkgs.gnome3.eog pkgs.libertinus ];
+        ruby = pkgs.ruby_3_3.withPackages (ps: with ps; [ nokogiri ]);
+        deps = [ ruby pkgs.gnuplot pkgs.libertinus ];
       in
       {
         devShells.default =

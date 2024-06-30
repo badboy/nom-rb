@@ -30,7 +30,7 @@
 
               cat > $bin <<EOF
               #!/bin/sh -e
-              export PATH="${pkgs.gnuplot}/bin:${pkgs.gnome3.eog}/bin:$PATH"
+              export PATH="${pkgs.gnuplot}/bin:$PATH"
               exec ${ruby}/bin/ruby $out/share/nom/bin/nom "\$@"
               EOF
 
